@@ -1,6 +1,25 @@
 #app.R build basic structure and add functionality later
 #mostly placeholder to combine with graphing later.
 
+# ====== USER SETTING ======
+data_path <- "C:\\Users\\jacob\\git\\NCSU\\project2\\data\\combined.csv"   # <-- update to your CSV; switch to readRDS for .rds
+
+# ====== PACKAGES ======
+suppressPackageStartupMessages({
+  library(shiny)
+  library(bslib)
+  library(shinycssloaders)
+  library(DT)
+  library(tidyverse)
+  library(janitor)
+  library(skimr)
+  library(scales)
+})
+
+theme_set(theme_minimal(base_size = 13))
+
+
+
 suppressPackageStartupMessages({
   library(shiny)
   library(bslib)
@@ -37,7 +56,7 @@ placeholder_css <- "
 ui <- page_fluid(
   theme = bs_theme(version = 5, bootswatch = "flatly"),
   tags$head(tags$style(HTML(placeholder_css))),
-  titlePanel("Banking Data App (In-Progress)"),
+  titlePanel("Banking Data App"),
   
   sidebarLayout(
     sidebarPanel(
