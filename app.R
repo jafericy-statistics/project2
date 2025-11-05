@@ -83,14 +83,14 @@ ui <- page_fluid(
         id = "main_tabs",
         
         tabPanel(
-          title = "about",
+          title = "About",
           value = "about_tab",
           h3("About This App (Need to test)"),
           p("This is a UI-only wireframe. Need to add more"),
           tags$ul(
-            tags$li("About: overview text."),
-            tags$li("Data Download: table and download button."),
-            tags$li("Data Exploration: summaries and plots.")
+            tags$li("This application serves as a blueprint for builing interactive Shiny dashboards."),
+            tags$li("It provides a complete user interface that allows the users to look through and explore the data in detail."),
+            tags$li("It also provides basic summaries and plots.")
           ),
           tags$hr(),
           div(class = "placeholder sm", "image output or data-source link placeholder")
