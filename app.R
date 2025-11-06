@@ -28,16 +28,13 @@ safe_levels <- function(x) {
   if (is.factor(x)) levels(x) else sort(unique(x))
 }
 
-#function reads in data automaticalled regardless of extension (csv, txt, rds) from defined path
+#function reads in data automatically called regardless of extension (csv, txt, rds) from defined path
 load_data <- function(path) {
-  ext <- tools::file_ext(path)
-  if (ext %in% c("csv", "txt")) {
-    readr::read_csv(path, show_col_types = FALSE)
-  } else if (tolower(ext) == "rds") {
-    readRDS(path)
-  } else {
-    stop("This file extension is not supported!: ", ext)
-  }
+  switch(tolower(tools::file_ext(path)),
+         csv = , txt = readr::read_csv(path, show_col_types = FALSE),
+         rds = readRDS(path),
+         stop("This file extention is not supported!: ", tools::file_ext(path))
+  )
 }
 
 #clean dataset and identify num and cat columns
