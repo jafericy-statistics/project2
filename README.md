@@ -1,4 +1,4 @@
-##Banking Data Application
+#Banking Data Application
 
 Overview
 This Shiny application in R provides an interactive user interface (UI) for exploring and summarizing the banking dataset on consumers and their financial/demographic information.
