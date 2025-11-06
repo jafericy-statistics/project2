@@ -13,11 +13,13 @@ It is designed to explore data cleaning, dynamic UI creation, and reactive filte
 •	Filtering System:  Users can filter data by category or numeric values and then apply those filters interactively.
 
 
-
-
-
-
-
+#How to Run the App
+•	Open the project in RStudio.
+•	Ensure all required packages are installed: please refer to requirements.txt file for package list and release versions of each.
+•	Open app.R and click Run App.
+•	Use the sidebar controls to:
+•	Choose categorical and numeric variables.
+•	Adjust filters and click Apply Filters.
 
 
 #Application Issues
